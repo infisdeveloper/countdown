@@ -1,0 +1,87 @@
+/* Nền dark mode */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Fullscreen layout */
+.fullscreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Tên sự kiện và đếm ngược */
+#event-name {
+    font-size: 96px;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+#time-remaining {
+    font-size: 110px;
+    margin-bottom: 40px;
+    color: #ff6347;
+}
+
+/* Nút back */
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #555;
+}
+
+/* Nút fullscreen */
+.fullscreen-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.fullscreen-btn:hover {
+    background-color: #555;
+}
+
+/* Thêm hiệu ứng dark mode */
+h1, h2 {
+    color: #ffffff;
+}
+
+body.darkmode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
