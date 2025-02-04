@@ -6,7 +6,6 @@ body {
     box-sizing: border-box;
     background-color: #121212;
     color: #ffffff;
-    overflow: hidden;
 }
 
 /* Fullscreen layout */
@@ -17,51 +16,73 @@ body {
     flex-direction: column;
     height: 100vh;
     text-align: center;
-    padding: 5%;
 }
 
-/* Tên sự kiện và đếm ngược - dùng đơn vị viewport để linh hoạt */
+/* Tên sự kiện và đếm ngược */
 #event-name {
-    font-size: 8vw; /* Tự động điều chỉnh theo màn hình */
-    margin-bottom: 5vh;
+    font-size: 96px;
+    margin-bottom: 40px;
     color: #ffffff;
 }
 
 #time-remaining {
-    font-size: 12vw; /* Tự động điều chỉnh theo màn hình */
-    margin-bottom: 5vh;
+    font-size: 110px;
+    margin-bottom: 40px;
     color: #ff6347;
 }
 
 /* Nút back */
-.back-btn, .fullscreen-btn {
+.back-btn {
     position: absolute;
     top: 10px;
+    left: 10px;
     background-color: #333;
     color: white;
     border-radius: 50%;
     border: none;
-    width: 12vw; /* Định kích thước theo màn hình */
-    height: 12vw;
-    max-width: 50px; /* Giới hạn kích thước tối đa */
-    max-height: 50px;
-    font-size: 5vw;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
 
-.back-btn:hover, .fullscreen-btn:hover {
+.back-btn:hover {
     background-color: #555;
 }
 
-.back-btn {
-    left: 5%;
+/* Nút fullscreen */
+.fullscreen-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-.fullscreen-btn {
-    right: 5%;
+.fullscreen-btn:hover {
+    background-color: #555;
+}
+
+/* Thêm hiệu ứng dark mode */
+h1, h2 {
+    color: #ffffff;
+}
+
+body.darkmode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
 /* Điều chỉnh trên thiết bị nhỏ */
@@ -71,6 +92,6 @@ body {
     }
 
     #time-remaining {
-        font-size: 12vw;
+        font-size: 8vw;
     }
 }
