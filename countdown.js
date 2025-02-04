@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             timeParts.push(`${seconds.toString().padStart(2, '0')}s`);
 
             // Kết hợp lại thành chuỗi và hiển thị
-            timeRemainingEl.textContent = timeParts.join(', ');
+            timeRemainingEl.textContent = timeParts.join(' ');
         }
 
         updateCountdown(); // Cập nhật lần đầu tiên ngay khi tải trang
