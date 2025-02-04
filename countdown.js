@@ -48,19 +48,19 @@ document.addEventListener('DOMContentLoaded', () => {
             let timeParts = []; // Mảng chứa các phần của thời gian
 
             if (days > 0) {
-                timeParts.push(`${days} ngày`);
+                timeParts.push(`${days}d`);
             }
 
             if (hours > 0 || days > 0) { 
-                timeParts.push(`${hours.toString().padStart(2, '0')} giờ`);
+                timeParts.push(`${hours.toString().padStart(2, '0')}h`);
             }
 
             if (minutes > 0 || hours > 0 || days > 0) {
-                timeParts.push(`${minutes.toString().padStart(2, '0')} phút`);
+                timeParts.push(`${minutes.toString().padStart(2, '0')}m`);
             }
 
             // Giây luôn hiển thị
-            timeParts.push(`${seconds.toString().padStart(2, '0')} giây`);
+            timeParts.push(`${seconds.toString().padStart(2, '0')}s`);
 
             // Kết hợp lại thành chuỗi và hiển thị
             timeRemainingEl.textContent = timeParts.join(', ');
