@@ -67,10 +67,10 @@ body {
 /* Điều chỉnh trên thiết bị nhỏ */
 @media (max-width: 600px) {
     #event-name {
-        font-size: 10vw;
+        font-size: 8vw;
     }
 
     #time-remaining {
-        font-size: 15vw;
+        font-size: 12vw;
     }
 }

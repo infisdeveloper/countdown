@@ -45,8 +45,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
             const seconds = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
 
-            timeRemainingEl.textContent = `${days} ngày, ${hours} giờ, ${minutes} phút, ${seconds} giây`;
+            let timeParts = []; // Mảng chứa các phần của thời gian
 
+            if (days > 0) {
+                timeParts.push(`${days} ngày`);
+            }
+
+            if (hours > 0 || days > 0) { 
+                timeParts.push(`${hours.toString().padStart(2, '0')} giờ`);
+            }
+
+            if (minutes > 0 || hours > 0 || days > 0) {
+                timeParts.push(`${minutes.toString().padStart(2, '0')} phút`);
+            }
+
+            // Giây luôn hiển thị
+            timeParts.push(`${seconds.toString().padStart(2, '0')} giây`);
+
+            // Kết hợp lại thành chuỗi và hiển thị
+            timeRemainingEl.textContent = timeParts.join(', ');
         }
 
         updateCountdown(); // Cập nhật lần đầu tiên ngay khi tải trang
